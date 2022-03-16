@@ -1,13 +1,452 @@
-.body {
-    font-size: 16px;
-    line-height: 19px;
+* {
+    margin:0px;
+    padding:0px;
 }
+
+a{ text-decoration: none; }
+
+span{ border:none; }
+
+body {
+    font-size: 16px;
+    /* line-height: 19px; */
+    background-color: rgba( 234, 238, 243, 0.5 );
+    /* background-color: #eaeef3; */
+
+    /* line-height: 19px; */
+    color: #303038;
+    /* font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue","Apple SD Gothic Neo",Arial,sans-serif; */
+}
+
+
 
 .header{
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 2000;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    font-size:0px;
+    position:absolute;
+    top:0px;
 }
 
+.menu-img{
+    display:inline-block;
+    width:44px;
+    height:44px;
+    margin: 8px;
+    background-image: url(https://s.pstatic.net/static/www/m-new/uit/img/sp_main_search_9299001e.png);
+    background-position: -49px -145px;
+    background-size: 323px 234px;
+    background-repeat: no-repeat;
+}
+
+.header_mydataWrap{
+    font-size: 0px;
+}
+
+.mydata_{
+    display:inline-block;
+    padding:10px 0px;
+}
+
+.mydata{
+    display: inline-block;
+    width:40px;
+    height:40px;
+    background-image: url(https://s.pstatic.net/static/www/m-new/uit/img/sp_main_search_9299001e.png);
+    background-size: 323px 234px;
+    background-repeat: no-repeat;
+}
+
+.mydata.pay{
+    background-position: -90px -194px;
+}
+
+.mydata.alram{
+    background-position: -45px -194px;
+}
+
+.mydata-button{
+    display:inline-block;
+    padding: 8px;
+}
+
+.mydata-button .btn{
+    display: inline-block;
+    width:44px;
+    height:44px;
+    background-image: url(https://s.pstatic.net/static/www/m-new/uit/img/sp_main_search_9299001e.png);
+    background-size: 323px 234px;
+    background-repeat: no-repeat;
+    background-position: -261px -76px;
+}
+
+
+
+.contents{
+    padding-top:120px;
+}
+
+
+.searchbarWrap{
+    /* width:calc(100% - 40px); */
+    padding:0px 20px;
+    margin: 0 auto;
+    max-width: 488px;
+    /* background: linear-gradient(105deg,#03cf5d,#03c75a 100%); */
+}
+
+.searchbar-bg{
+    position:relative;
+    height: 50px;
+    padding: 1px;
+    border-radius: 26px;
+    box-shadow: 0 5px 10px 0 rgb(117 145 181 / 12%);
+    background: linear-gradient(105deg,#03cf5d,#03c75a 100%);
+}
+
+.searchbar{
+    position:absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 1px;
+    background-color: #fff;
+    border-radius: 25px;
+
+}
+
+.searchbar-inner{
+    position:relative;
+    padding-left:51px;
+    border-radius: 25px;
+    font-size:0px;
+}
+
+.serchbar-logo{
+    display: inline-block;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.logo-a{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px 0 5px 11px;
+
+}
+
+.logo-span{
+    display: block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-image: url(https://s.pstatic.net/static/www/m-new/uit/img/sp_main_search_9299001e.png);
+    background-color: #03c75a;
+    background-size: 323px 234px;
+    background-repeat: no-repeat;
+    background-position: 0 -194px;
+}
+
+.sch_input-wrap{
+    padding: 0 35px 0 10px;
+    margin-right: 9px;
+}
+
+.sch_input{
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 22px;
+    padding: 14px 0;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: -.5px;
+    color: #1e1e23;
+    border: 0;
+    opacity: 0.4;
+    outline-color: transparent;
+    outline-style: initial;
+    outline-width: initial;
+    background: 0 0;
+    text-overflow: ellipsis;
+    box-sizing: content-box;
+    font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue","Apple SD Gothic Neo",Arial,sans-serif;
+}
+
+
+
+.sch_button-wrap{
+    position: absolute;
+    top: 0;
+    right: 4px;
+    z-index: 10;
+    font-size: 0;
+    line-height: 0;
+    padding: 8px 5px;
+}
+
+.sch_button{
+    display: inline-block;
+    vertical-align: top;
+    border: 0;
+    border-radius: 0;
+    background: 0 0;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.button-img{
+    display:inline-block;
+    width: 34px;
+    height: 34px;
+    background-position: -174px -194px;
+    background-image: url(https://s.pstatic.net/static/www/m-new/uit/img/sp_main_search_9299001e.png);
+    background-color: #03c75a;
+    background-size: 323px 234px;
+    background-repeat: no-repeat;
+}
+
+
+/* menu-btn */
+
+.menu-btn-wrap{
+    width: calc(208px + 21vw);
+    margin: 0 auto;
+    padding: 24px 0 37px;
+}
+
+.btn-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin: -12px 0 0 -7vw;
+}
+
+.btn-item{
+    padding: 12px 0 0 7vw;
+    box-sizing: border-box;
+    display: list-item;
+    list-style: none;
+    font-size: 0px;
+}
+
+@media(max-width: 319px){
+    .menu-btn-wrap{
+        width: 192px;
+        padding-bottom: 7px;
+    }
+    .btn-list {
+        margin-left:-18px
+    }
+
+    .btn-item{
+        padding-left: 18px;
+    }
+}
+
+@media (min-width: 515px){
+    .menu-btn-wrap{
+        width: 316px;
+        padding-bottom: 7px;
+    }
+
+    .btn-list {
+        margin-left: -36px;
+    }
+
+    .btn-item{
+        padding-left: 36px;
+    }
+   
+}
+
+
+
+
+
+
+
+
+.item-a{
+    display: block;
+    width: 52px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.item-span{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    margin-top: 5px;
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: -.55px;
+    color: #1e1e23;
+}
+
+
+/* banner */
+.banner-wrap{
+    margin: 0 8px -16px;
+    padding-top: 50px;
+}
+
+@media (min-width: 500px){
+    .banner-wrap {
+        margin-left: 36px;
+        margin-right: 36px;
+    }
+}
+
+@media (max-width: 300px){
+    .banner-wrap {
+        margin-left: 5px;
+        margin-right: 5px
+    }
+}
+
+.banner-span{
+    position: relative;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-height: 115px;
+    height: auto;
+    border: none;
+    pointer-events: none;
+    padding-bottom: 10px;
+}
+
+.weather-wrap{
+    display:inline-block;
+    overflow: hidden;
+    height: 60px;
+    max-width: 540px;
+    padding: 0 16px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: #fff;
+    margin-left: 8px;
+    margin-right: 8px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px 0 rgb(0 0 0 / 6%);
+    transform: translate3d(0, 0, 100px);
+    font-size: 0px;
+    
+}
+
+.weather-wrap > a{
+    display: flex;
+    position: relative;
+    margin-left: -6px;
+}
+
+.weather-contents{
+    margin: 0 -4px 0 0;
+    float: left;
+}
+
+.weather-img{
+    margin-right: -5px;
+    position:relative;
+    width: 66px;
+    height: 66px;
+    transform: scale(.8485) translate(0,-10px);
+    transition-duration: .25s;
+
+    transform-origin: 0 100%;
+    transition: transform .3s ease-out,-webkit-transform .3s ease-out;
+}
+
+.cloud{
+    width: 53px;
+    height: 35px;
+    background-position: -58px -150px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background-image: url(https://s.pstatic.net/static/www/m-new/uit/img/sp_weather_animation_c2a5b9ac.png);
+    background-size: 472px 447px;
+    background-repeat: no-repeat;
+    animation: ani_cloud 1.5s cubic-bezier(.445,.05,.55,.95) alternate infinite;
+}
+
+@keyframes ani_cloud{
+    0% {
+        transform: translate(0,0);
+    }
+    100% {
+        transform: translate(0,-1px);
+    }
+
+}
+
+.weather-text{
+    padding: 18px 0;
+    margin-right: 48px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.info_main{
+    display: inline;
+    line-height: 24px;
+    vertical-align: top;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: -.5px;
+    color: #303038;
+}
+
+.info_main > .temp{
+    font-size: 19px;
+    font-style: italic;
+    vertical-align: top;
+    font-style: normal;
+}
+
+.info_sub{
+    display: inline;
+    margin-left:4px;
+    line-height: 24px;
+    vertical-align: top;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: -.5px;
+    color: #303038;
+    white-space: nowrap;
+
+}
+
+.weather-button{
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 40px;
+    height: 60px;
+    overflow: hidden;
+    border: 0;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity .35s .1s ease-in-out;
+}
+
+.weather-buttonImg{
+    display: block;
+    position: relative;
+    width: 13px;
+    margin: 1px auto 0;
+    color: transparent;
+    white-space: nowrap;
+
+}
