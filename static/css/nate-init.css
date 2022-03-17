@@ -1,0 +1,465 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, input, textarea, button, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    font-family: '맑은 고딕',"Malgun Gothic","돋움",Dotum,"굴림",Gulim,Helvetica,sans-serif;
+}
+
+body{
+    line-height: 1.2em;
+    font-weight: normal;
+    background-color: #e6e7e9;
+}
+
+
+a {
+    color: #222;
+    text-decoration: none;
+}
+
+p {
+    display: block;
+    margin: 0;
+
+}
+
+
+
+input{
+    font-weight: normal;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+    outline: none;
+}
+
+input[type="hidden" i] {
+    appearance: none;
+    background-color: initial;
+    cursor: default;
+    display: none !important;
+    padding: initial;
+    border: initial;
+}
+
+input[type="button" i] {
+    appearance: auto;
+    user-select: none;
+    white-space: pre;
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+    color: -internal-light-dark(black, white);
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+}
+
+img, fieldset {
+    border: 0;
+}
+
+legend {
+    clear: both;
+    display: none;
+    padding-inline-start: 2px;
+    padding-inline-end: 2px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+em, i, address {
+    font-style: normal;
+    font-weight: normal;
+}
+
+button {
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+
+input, textarea, button, select {
+    outline: none;
+}
+
+.srchword .btn_open em, .srchword .btn_fold em {
+    display: block;
+    width: 14px;
+    height: 8px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 12px;
+    text-indent: -9999em;
+    overflow: hidden;
+    background: url(https://m1.nateimg.co.kr/n3main/sets2/set_ic2.png?v=2021081900) 0 -380px no-repeat;
+    background-size: 64px auto;
+}
+
+.srchword.iskw .rankFold .rank {
+    margin: 0 41px 0 0;
+}
+
+.srchword .rankFold .rank {
+    height: 40px;
+    line-height: 40px;
+}
+.srchword .rankFold .rank {
+    margin: 0 43px 0 0;
+}
+.srchword .rank {
+    margin: 0;
+    overflow: hidden;
+}
+
+.srchword .rankFold h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100px;
+    padding-left: 15px;
+}
+
+.srchword .rankFold h2 span {
+    display: block;
+    width: 100px;
+    font-size: 14px;
+    color: #999;
+}
+
+.srchword.iskw .rankFold .rl {
+    padding-left: 116px;
+}
+
+.srchword.iskw .rank .rl {
+    height: 40px;
+    line-height: 40px;
+}
+.srchword .rankFold .rl {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 116px;
+    border: 0;
+}
+.srchword .rank .rl {
+    height: 40px;
+    padding: 0;
+    line-height: 40px;
+}
+
+.srchword.iskw .rankFold .rl a {
+    position: relative;
+    padding: 0 20px 0 0;
+}
+
+.srchword.iskw .rank .rl a {
+    height: 40px;
+    padding: 0 55px 0 15px;
+    line-height: 40px;
+}
+.srchword .rankFold .rl a {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 45px 0 0;
+}
+.srchword .rank .rl a {
+    position: relative;
+    display: block;
+    height: 40px;
+    padding: 0 45px 0 15px;
+    font-size: 15px;
+    line-height: 40px;
+}
+
+.srchword .rank .rl a .kw {
+    display: inline-block;
+    width: 97%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.srchword.iskw .rankFold .rl a .kw .num, .srchword.iskw .rank .rl a .kw .num.rank1 {
+    background-color: #ff2c2e;
+}
+
+.srchword.iskw .rank .rl a .kw .num {
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+    line-height: 18px;
+    border-top: 0;
+    border-radius: 50%;
+    background-color: #ff2c2e;
+    
+}
+.srchword .rank .rl a .kw .num {
+    display: inline-block;
+    position: relative;
+    top: -1px;
+    width: 18px;
+    height: 18px;
+    margin-right: 7px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 18px;
+    color: #fff;
+    text-align: center;
+    background-color: #c7c8c9;
+    border-radius: 100%;
+}
+
+.mainBn {
+    position: relative;
+    margin: 9px 0;
+    overflow: hidden;
+    text-align: center;
+    line-height: 0;
+    font-size: 0;
+}
+
+img[Attributes Style] {
+    width: 320px;
+    aspect-ratio: auto 320 / 150;
+    height: 150px;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+}
+
+.mpt1.ic2 {
+    padding: 10px 12px 0;
+}
+.mpt1 {
+    padding: 10px 13px 0;
+    overflow: hidden;
+}
+
+.mpt1 .pt2 {
+    float: left;
+    width: 50%;
+    margin-bottom: 1.067em;
+    padding: 0 3px;
+    overflow: hidden;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+
+.mpt1 .pt2 a {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.mpt1 .pt2 a .iBox {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding-top: 68.95%;
+    overflow: hidden;
+}
+
+.mpt1 .pt2 a .iBox img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+.mpt1 .pt2 a .iBox .iType {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    overflow: visible;
+}
+
+.mpt1 .pt2 a .iBox .iType span.photo {
+    background-position: -21px -798px;
+}
+
+.mpt1 .pt2 a .iBox .iType span {
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    text-indent: -99999px;
+    font-size: 0;
+    background: url(https://m1.nateimg.co.kr/n3main/sets2/set_ic2.png?v=2021081900) 0 -798px no-repeat;
+    background-size: 64px auto;
+}
+
+.mpt1 .pt2 a .iBox + span {
+    display: -webkit-box;
+    margin: 8px auto 0;
+    padding: 0 18px 0 0;
+    height: 2.4em;
+    font-size: 0.933em;
+    letter-spacing: -1px;
+    line-height: 1.286em;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+}
+
+
+/* 날씨 */
+
+.lifeInfo {
+    position: relative;
+    height: 38px;
+    overflow: hidden;
+}
+
+.lifeInfo .info {
+    position: relative;
+    float: left;
+    width: 70%;
+}
+
+.skipNav, .hide {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.lifeInfo .info .wt {
+    padding-right: 35px;
+    height: 38px;
+    line-height: 38px;
+}
+
+.lifeInfo .info .wt a {
+    display: block;
+    padding: 0 0 0 15px;
+    height: 38px;
+    line-height: 38px;
+}
+
+
+.lifeInfo .info .wt .area {
+    float: left;
+    display: inline-block;
+    width: 50px;
+    font-size: 0.867em;
+    font-weight: 500;
+    color: #999;
+    letter-spacing: -1px;
+    overflow: hidden;
+}
+
+.lifeInfo .info .wt img {
+    position: relative;
+    top: 7px;
+    float: left;
+    width: 22px;
+    margin-right: 7px;
+}
+
+.lifeInfo .info .wt .tem {
+    float: left;
+    width: 30px;
+    font-family: Helvetica;
+    font-size: 1.067em;
+    color: #222;
+}
+
+.lifeInfo .info .wt .rainfall {
+    position: relative;
+    float: left;
+    padding-left: 13px;
+    font-size: 0.800em;
+    color: #747472;
+}
+
+.lifeInfo .info .wt .rainfall:before {
+    content: '';
+    position: absolute;
+    top: 13px;
+    left: 0;
+    width: 10px;
+    height: 13px;
+    background: url(https://m1.nateimg.co.kr/n3main/sets2/set_ic2.png?v=2021081900) 0 -545px no-repeat;
+    background-size: 64px auto;
+}
+
+.lifeInfo .life {
+    float: left;
+    width: 30%;
+}
+
+.lifeInfo .life:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 38px;
+    border-left: 1px solid #ebebeb;
+}
+
+.lifeInfo .life a {
+    position: relative;
+    display: block;
+    height: 38px;
+    padding: 0 15px;
+    font-size: 0.938em;
+    font-weight: 500;
+    line-height: 38px;
+    letter-spacing: -1px;
+    text-align: center;
+    color: #666;
+}
+
+.lifeInfo .info .areaset {
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    overflow: hidden;
+    display: block;
+    width: 23px;
+    height: 23px;
+    text-indent: -9999px;
+    background-color: #dddcd9;
+    border-radius: 3px;
+}
+
+.lifeInfo .info .areaset:before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 6px;
+    width: 11px;
+    height: 14px;
+    background: url(https://m1.nateimg.co.kr/n3main/sets2/set_ic2.png?v=2021081900) 0 -527px no-repeat;
+    background-size: 64px auto;
+}
+
+

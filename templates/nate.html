@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nate</title>
+    <link rel="stylesheet" href="../static/css/nate-index.css">
+    <link rel="stylesheet" href="../static/css/nate-init.css">
+    <script type="text/javascript" src="../static/js/nate.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div>
+        <header role="banner">
+            <div id="header" class="header ">
+                <h1><a href="https://m.nate.com"
+                        onclick="MM_GLOBAL.resetTab(); return MM_GLOBAL.ndrclick('MBI00');"><img
+                            src="https://m1.nateimg.co.kr/n3main/newBI/nate_170x50.png" width="85" height="25"
+                            alt="NATE"></a></h1>
+
+                <div class="hdaside">
+                    <div class="my">
+                        <!--<span>my영역 열기</span> -->
+                        <a href="javascript:;" class="mybtn" data-btn="main_my"
+                            onclick="return MM_GLOBAL.ndrclick('MMY00');">my영역 열기</a>
+                    </div>
+
+                    <!-- <div class="mailBtn" id="main_mail">				
+				<a href="" onclick="return MM_GLOBAL.ndrclick('MMA01');">메일<span>new</span></a>
+			</div>-->
+                    <div class="todayLink">
+                        <a href="https://m.news.nate.com" class="today_tit"
+                            onclick="return MM_GLOBAL.ndrclick('MMT01');">
+                            <div class="logoimg">
+                                <div class="circle step1"></div>
+                                <div class="circle step2"></div>
+                            </div>
+                            <div class="svcname">오늘</div>
+                        </a>
+                    </div>
+                    <!-- 			<div class="todayLink"> 
+				<a href="https://m.news.nate.com" class="today_tit" onclick="return MM_GLOBAL.ndrclick('MMT01');">
+					<!-- img-today3-2x -->
+                    <!-- 					<img src="https://m1.nateimg.co.kr/n3main/m_today_2.gif" width="72" height="57" alt="오늘" /> -->
+                    <!-- 				</a> -->
+                    <!-- 			</div> -->
+                    <!-- 			<div class="todayLink">
+				<a href="https://m.news.nate.com" class="today_tit" onclick="return MM_GLOBAL.ndrclick('MMT01');">'오늘' 뉴스 바로가기</a>
+<!-- 			</div> -->
+
+                </div>
+
+
+                <div id="search_field" class="srchBox ">
+                    <form action="https://m.search.daum.net/nate" role="search" id="search" name="search" method="get"
+                        onsubmit="return MM_GLOBAL.searchSubmit();">
+                        <input type="hidden" name="q" id="q" value="">
+                        <input type="hidden" name="w" id="w" value="tot">
+                        <input type="hidden" name="thr" id="thr" value="mnms">
+                        <fieldset>
+                            <legend>통합검색</legend>
+                            <p class="field-wrap">
+                                <input type="text" name="input_search" id="input_search" class="type-text"
+                                    title="검색어 입력" maxlength="255" style="display: block;" autocomplete="off"
+                                    autocapitalize="off" autocorrect="off">
+                            </p>
+                            <input type="button" id="acBtn" class="type-btn" title="검색" value="검색"
+                                onclick="return MM_GLOBAL.ndrclick3('MSE03');">
+                        </fieldset>
+                    </form>
+                    <span class="acTxtClr" id="acTextClr" style="display:none;"><a class="searchRemove"
+                            href="javascript:;" onclick="return MM_GLOBAL.ndrclick('MSE02');"
+                            style="display: none;">Keyword Clear</a></span>
+                </div>
+            </div>
+
+            <div id="searchWrap" class="search-wrap" style="display:none;">
+                <div id="acDiv">
+                    <div class="ac-mod">
+                        <div id="viewDiv">
+                            <ul class="nh">
+                                <!-- 자동완성 데이터 -->
+                            </ul>
+                        </div>
+                        <div class="func">
+                            <span><a onclick="return MM_GLOBAL.ndrclick('COM18');" class="close"
+                                    id="closeBtn">닫기</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav role="navigation" class="blockNavi">
+            <div class="nav" style="width: 100%;">
+                <ul class=" navTab"
+                    style="transform: translate3d(0px, 0px, 0px); width: 100%; overflow: hidden; display: block; transition-duration: 0ms;">
+
+                    <li role="presentation">
+                        <a href="javascript:;" class="on clickOn news" aria-selected="true" role="tab" title="뉴스"
+                            onclick="return MM_GLOBAL.ndrclick('MME01');">뉴스 <span
+                                class="bNav"><span class="num select"> </span><span class="num"> </span><span
+                                    class="num"> </span></span> </a>
+                    </li>
+
+                    <li role="presentation">
+                        <a href="javascript:;" aria-selected="false" role="tab" title="이슈+"
+                            onclick="return MM_GLOBAL.ndrclick('MME07');">이슈+ <span
+                                class="bNav"><span class=" "> </span><span class=" "> </span></span> </a>
+                    </li>
+
+                    <li role="presentation">
+                        <a href="javascript:;" aria-selected="false" role="tab" title="랭킹"
+                            onclick="return MM_GLOBAL.ndrclick('MME02');" >랭킹 <span
+                                class="bNav"><span class=" "> </span><span class=" "> </span><span class=" ">
+                                </span></span> </a>
+                    </li>
+
+                    <li role="presentation">
+                        <a href="javascript:;" aria-selected="false" role="tab" title="TV"
+                            onclick="return MM_GLOBAL.ndrclick('MME012');">TV <span
+                                class="bNav"><span class=" "> </span></span> </a>
+                    </li>
+
+                    <li role="presentation">
+                        <a href="javascript:;" aria-selected="false" role="tab" title="판"
+                            onclick="return MM_GLOBAL.ndrclick('MME03');">판 <span
+                                class="bNav"><span class=" "> </span><span class=" "> </span><span class=" ">
+                                </span></span> </a>
+                    </li>
+
+                    <li role="presentation">
+                        <a href="javascript:;" aria-selected="false" role="tab" title="쇼핑"
+                            onclick="return MM_GLOBAL.ndrclick('MME04');">쇼핑 <span
+                                class="bNav"><span class=" "> </span><span class=" "> </span></span> </a>
+                    </li>
+
+                    <li role="presentation">
+                        <a href="javascript:;" aria-selected="false" role="tab" title="툰앤북"
+                            onclick="return MM_GLOBAL.ndrclick('MME013');" >툰앤북 <span
+                                class="bNav"><span class=" "> </span></span> </a>
+                    </li>
+
+                    <li role="presentation">
+                        <a href="javascript:;" aria-selected="false" role="tab" title="여행맛집"
+                            onclick="return MM_GLOBAL.ndrclick('MME08');">여행맛집 <span
+                                class="bNav"><span class=" "> </span></span> </a>
+                    </li>
+
+                    <li role="presentation">
+                        <a href="javascript:;" aria-selected="false" role="tab" title="뷰티패션"
+                            onclick="return MM_GLOBAL.ndrclick('MME09');">뷰티패션 <span
+                                class="bNav"><span class=" "> </span></span> </a>
+                    </li>
+
+                    <li role="presentation">
+                        <a href="javascript:;" aria-selected="false" role="tab" title="리빙푸드"
+                            onclick="return MM_GLOBAL.ndrclick('MME10');">리빙푸드 <span
+                                class="bNav"><span class=" "> </span></span> </a>
+                    </li>
+
+                    <li role="presentation">
+                        <a href="javascript:;" aria-selected="false" role="tab" title="엔터"
+                            onclick="return MM_GLOBAL.ndrclick('MME06');">엔터 <span
+                                class="bNav"><span class=" "> </span></span> </a>
+                    </li>
+                </ul>
+                <div class=" mask" style="left: -1px; transform: rotate(180deg);"></div>
+                <div class=" mask" style="right: -1px;"></div>
+            </div>
+        </nav>
+
+        <nav role="navigation" class="ghostNavi"
+            style="display: none; position: fixed; z-index: 998; top: 0px; left: 0px; height: 42px; width: 400px;">
+            <div class="nav" style="width: 0px;">
+                <ul class=" navTab"
+                    style="position: absolute; transform: translate3d(0px, 0px, 0px); width: 651px; transition-duration: 0ms; display: block;">
+                    <li role="presentation">
+                        <a href="javascript:;" class="on" aria-selected="true" role="tab" title="뉴스"
+                            onclick="return MM_GLOBAL.ndrclick('MME01');" style="color: rgb(239, 22, 22);">뉴스 <span
+                                class="bNav"><span class="num select"> </span><span class="num"> </span><span
+                                    class="num"> </span></span>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="javascript:;" aria-selected="false" role="tab" title="이슈+"
+                            onclick="return MM_GLOBAL.ndrclick('MME07');" style="color: inherit;">이슈+ <span
+                                class="bNav"><span class=" "> </span><span class=" "> </span></span>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="javascript:;" aria-selected="false" role="tab" title="랭킹"
+                            onclick="return MM_GLOBAL.ndrclick('MME02');" style="color: inherit;">랭킹 <span
+                                class="bNav"><span class=" "> </span><span class=" "> </span><span class=" ">
+                                </span></span>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="javascript:;" aria-selected="false" role="tab" title="TV"
+                            onclick="return MM_GLOBAL.ndrclick('MME012');" style="color: inherit;">TV <span
+                                class="bNav"><span class=" "> </span></span>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="javascript:;" aria-selected="false" role="tab" title="판"
+                            onclick="return MM_GLOBAL.ndrclick('MME03');" style="color: inherit;">판 <span
+                                class="bNav"><span class=" "> </span><span class=" "> </span><span class=" ">
+                                </span></span>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="javascript:;" aria-selected="false" role="tab" title="쇼핑"
+                            onclick="return MM_GLOBAL.ndrclick('MME04');" style="color: inherit;">쇼핑 <span
+                                class="bNav"><span class=" "> </span><span class=" "> </span></span>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="javascript:;" aria-selected="false" role="tab" title="툰앤북"
+                            onclick="return MM_GLOBAL.ndrclick('MME013');" style="color: inherit;">툰앤북 <span
+                                class="bNav"><span class=" "> </span></span>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="javascript:;" aria-selected="false" role="tab" title="여행맛집"
+                            onclick="return MM_GLOBAL.ndrclick('MME08');" style="color: inherit;">여행맛집 <span
+                                class="bNav"><span class=" "> </span></span>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="javascript:;" aria-selected="false" role="tab" title="뷰티패션"
+                            onclick="return MM_GLOBAL.ndrclick('MME09');" style="color: inherit;">뷰티패션 <span
+                                class="bNav"><span class=" "> </span></span>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="javascript:;" aria-selected="false" role="tab" title="리빙푸드"
+                            onclick="return MM_GLOBAL.ndrclick('MME10');" style="color: inherit;">리빙푸드 <span
+                                class="bNav"><span class=" "> </span></span>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="javascript:;" aria-selected="false" role="tab" title="엔터"
+                            onclick="return MM_GLOBAL.ndrclick('MME06');" style="color: inherit;">엔터 <span
+                                class="bNav"><span class=" "> </span></span>
+                        </a>
+                    </li>
+
+                </ul>
+                <div class=" mask" style="left: -1px; transform: rotate(180deg);"></div>
+                <div class=" mask" style="right: -1px;"></div>
+            </div>
+        </nav>
+    </div>
+    <!-- body -->
+    <div>
+
+
+        <div class="mainContainer f2" style="position: relative; height: 1000px; overflow: hidden; width: 100%;"
+            id="mainContainer">
+
+            <div class=" rollItem"
+                style="position: absolute; width: 100%; transform: translate3d(0px, 0px, 0px); z-index: 1;">
+                <div class="rollItem" style="width:100%; left:0">
+                    <div class="conWrap" id="content" role="main">
+                        <div class="ct1">
+
+
+
+
+
+
+
+
+                            <section>
+                                <div class="section FIELD" id="navbarNewDiv" style="display:none; height:200px"></div>
+                                <div class="section FIELD" id="navbarDiv">
+                                    <ul class="mt1">
+                                        <li class="lt2_5">
+                                            <a href="https://m.news.nate.com/view/20220316n10057?list=edit&amp;cate=tot"
+                                                onclick="return MM_GLOBAL.ndrclick('MBG02', 'MH_04_02_01-20220316093434');"><span
+                                                    class="sbj">코로나19</span><span class="tit"> 신규확진 40만741명…총 762만9천275명
+                                                    (3.16 기준)</span></a>
+                                        </li>
+                                    </ul>
+
+
+                                    <ul class="mt1">
+                                        <li class="lt2_2">
+
+                                            <a href="https://m.news.nate.com/hissue/list?mid=m03&amp;isq=10515#cid814420"
+                                                target="_self"
+                                                onclick="return MM_GLOBAL.ndrclick('TDN01', 'MH_01_06_01-20220317064751');"><span
+                                                    class="tit"><strong>확진자 폭증에 곳곳서 파열음…"의료현장은 아비규환"</strong></span></a>
+                                        </li>
+                                        <li class="lt2_2">
+
+                                            <a href="https://m.news.nate.com/hissue/list?mid=m01&amp;isq=10804#cid920847"
+                                                target="_self"
+                                                onclick="return MM_GLOBAL.ndrclick('TDN02', 'MH_01_06_02-20220317091959');"><span
+                                                    class="tit">尹당선인측 "문대통령과 회동, 소통·조율 이뤄지고 있어"</span></a>
+                                        </li>
+                                        <li class="lt2_2">
+
+                                            <a href="https://m.news.nate.com/spo?sq=743106" target="_self"
+                                                onclick="return MM_GLOBAL.ndrclick('TDN03', 'MH_02_10_04-20220317061252');"><span
+                                                    class="tit">"그렇게 떨던 오빠가 날 살려줬어요" 하늘도 감동한 동료애</span></a>
+                                        </li>
+                                        <li class="lt2_2">
+
+                                            <a href="https://m.news.nate.com/ent/section?mid=e01&amp;sq=921123"
+                                                target="_self"
+                                                onclick="return MM_GLOBAL.ndrclick('TDN04', 'MH_03_14_01-20220317080920');"><span
+                                                    class="tit">'21세 최연소 아나' 김수민 깜짝 혼인신고 "남편 재벌아냐"</span></a>
+                                        </li>
+                                        <li class="lt2_2">
+                                            <div class="clm2">
+
+                                                <a href="https://tv.nate.com/clip/4374336" target="_self" class="cntRt"
+                                                    onclick="return MM_GLOBAL.ndrclick('TDN051', 'MH_03_14_03-20220317085817');"><span
+                                                        class="tit"><span class="tag vod">vod</span>4억대 외제차</span></a>
+                                                <a href="https://m.news.nate.com/ent/section?mid=e02&amp;sq=921125"
+                                                    target="_self"
+                                                    onclick="return MM_GLOBAL.ndrclick('TDN05', 'MH_03_14_02-20220317090103');"><span
+                                                        class="tit">전소미 "부모님께 집 사주고 가게도 오픈"</span></a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+                                <section>
+                                    <div class="section FIELD">
+                                        <div class="srchword iskw" id="iskwOpen" style="display:;">
+                                            <div class="rankFold">
+                                                <button type="button" class="btn_open"
+                                                    onclick="return MM_GLOBAL.ndrclick('TDS82');"><em>실시간 이슈 키워드
+                                                        펼치기</em></button>
+                                                <div class="rank">
+                                                    <h2><span>실시간 이슈 키워드</span></h2>
+                                                    <div class="iskwCover">
+                                                        <div
+                                                            style="overflow: hidden; position: relative; height: 37px;">
+                                                            <div
+                                                                style="position: absolute; width: 100%; height: 37px; transform: translate3d(0px, -37px, 0px);">
+                                                                <div class="rl"><a
+                                                                        href="https://m.news.nate.com/search?q=%EC%A0%9C%EB%8B%88+SOLO+8%EC%96%B5%EB%B7%B0"
+                                                                        onclick="return MM_GLOBAL.ndrclick('TDS17');"><span
+                                                                            class="kw"><em class="num rank8">8</em>제니
+                                                                            SOLO 8억뷰</span></a></div>
+                                                            </div>
+                                                            <div
+                                                                style="position: absolute; width: 100%; height: 37px; transform: translate3d(0px, 0px, 0px);">
+                                                                <div class="rl"><a
+                                                                        href="https://m.news.nate.com/search?q=%EC%A3%BC%EC%8B%9D%EC%96%91%EB%8F%84%EC%84%B8+%ED%8F%90%EC%A7%80+%EA%B3%B5%EC%95%BD%EC%9D%80"
+                                                                        onclick="return MM_GLOBAL.ndrclick('TDS18');"><span
+                                                                            class="kw"><em class="num rank9">9</em>주식양도세
+                                                                            폐지 공약은</span></a></div>
+                                                            </div>
+                                                            <div
+                                                                style="position: absolute; width: 100%; height: 37px; transform: translate3d(0px, 37px, 0px);">
+                                                                <div class="rl"><a
+                                                                        href="https://m.news.nate.com/search?q=%EC%84%9C%EB%A5%B8+%EC%95%84%ED%99%89"
+                                                                        onclick="return MM_GLOBAL.ndrclick('TDS19');"><span
+                                                                            class="kw"><em class="num rank10">10</em>서른
+                                                                            아홉</span></a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="srchword iskw" id="iskwClose" style="display:none;">
+                                            <div class="rankOpen">
+                                                <button type="button" class="btn_fold"
+                                                    onclick="return MM_GLOBAL.ndrclick('TDS81');"><em>실시간 이슈 키워드
+                                                        닫기</em></button>
+                                                <div class="rank">
+                                                    <ul class="srchTab" id="">
+                                                        <li class="on"><span>실시간 이슈 키워드</span></li>
+                                                    </ul>
+
+                                                    <ol class="rankList">
+                                                        <li class="rl"><a
+                                                                href="https://m.news.nate.com/search?q=%EC%B6%94%EC%A0%95+%EB%AF%B8%EC%82%AC%EC%9D%BC+%EB%B0%9C%EC%82%AC"
+                                                                onclick="return MM_GLOBAL.ndrclick('TDS10');"><span
+                                                                    class="kw"><em class="num rank1">1</em>추정 미사일
+                                                                    발사</span></a></li>
+                                                        <li class="rl"><a
+                                                                href="https://m.news.nate.com/search?q=%EA%B9%80%EC%88%98%EB%AF%BC+%EC%95%84%EB%82%98%EC%9A%B4%EC%84%9C"
+                                                                onclick="return MM_GLOBAL.ndrclick('TDS11');"><span
+                                                                    class="kw"><em class="num rank2">2</em>김수민
+                                                                    아나운서</span></a></li>
+                                                        <li class="rl"><a
+                                                                href="https://m.news.nate.com/search?q=%E6%97%A5%ED%9B%84%EC%BF%A0%EC%8B%9C%EB%A7%88+%EC%95%9E%EB%B0%94%EB%8B%A4+%EA%B7%9C%EB%AA%A8"
+                                                                onclick="return MM_GLOBAL.ndrclick('TDS12');"><span
+                                                                    class="kw"><em class="num rank3">3</em>日후쿠시마 앞바다
+                                                                    규모</span></a></li>
+                                                        <li class="rl"><a
+                                                                href="https://m.news.nate.com/search?q=%EC%9E%90%EC%A7%84+%EC%8B%A0%EA%B3%A0+%EA%B2%BD%EC%B0%B0"
+                                                                onclick="return MM_GLOBAL.ndrclick('TDS13');"><span
+                                                                    class="kw"><em class="num rank4">4</em>자진 신고
+                                                                    경찰</span></a></li>
+                                                        <li class="rl"><a
+                                                                href="https://m.news.nate.com/search?q=%ED%91%B8%ED%8B%B4+%EA%B3%84%ED%9A%8D+%EC%A4%91%EB%A6%BD%EA%B5%AD%ED%99%94"
+                                                                onclick="return MM_GLOBAL.ndrclick('TDS14');"><span
+                                                                    class="kw"><em class="num rank5">5</em>푸틴 계획
+                                                                    중립국화</span></a></li>
+                                                        <li class="rl"><a
+                                                                href="https://m.news.nate.com/search?q=%EA%B7%9C%EB%AA%A8+7.3+%ED%95%9C%EB%95%8C"
+                                                                onclick="return MM_GLOBAL.ndrclick('TDS15');"><span
+                                                                    class="kw"><em class="num rank6">6</em>규모 7.3
+                                                                    한때</span></a></li>
+                                                        <li class="rl"><a
+                                                                href="https://m.news.nate.com/search?q=%EC%86%90%ED%9D%A5%EB%AF%BC+%ED%86%A0%ED%8A%B8%EB%84%98+%EB%B8%8C%EB%9D%BC%EC%9D%B4%ED%8A%BC%EC%97%90"
+                                                                onclick="return MM_GLOBAL.ndrclick('TDS16');"><span
+                                                                    class="kw"><em class="num rank7">7</em>손흥민 토트넘
+                                                                    브라이튼에</span></a></li>
+                                                        <li class="rl"><a
+                                                                href="https://m.news.nate.com/search?q=%EC%A0%9C%EB%8B%88+SOLO+8%EC%96%B5%EB%B7%B0"
+                                                                onclick="return MM_GLOBAL.ndrclick('TDS17');"><span
+                                                                    class="kw"><em class="num rank8">8</em>제니 SOLO
+                                                                    8억뷰</span></a></li>
+                                                        <li class="rl"><a
+                                                                href="https://m.news.nate.com/search?q=%EC%A3%BC%EC%8B%9D%EC%96%91%EB%8F%84%EC%84%B8+%ED%8F%90%EC%A7%80+%EA%B3%B5%EC%95%BD%EC%9D%80"
+                                                                onclick="return MM_GLOBAL.ndrclick('TDS18');"><span
+                                                                    class="kw"><em class="num rank9">9</em>주식양도세 폐지
+                                                                    공약은</span></a></li>
+                                                        <li class="rl"><a
+                                                                href="https://m.news.nate.com/search?q=%EC%84%9C%EB%A5%B8+%EC%95%84%ED%99%89"
+                                                                onclick="return MM_GLOBAL.ndrclick('TDS19');"><span
+                                                                    class="kw"><em class="num rank10">10</em>서른
+                                                                    아홉</span></a></li>
+                                                    </ol>
+                                                </div>
+
+                                                <div class="btnNav">
+                                                    <a class="close" id="iskwCloseBt"
+                                                        onclick="return MM_GLOBAL.ndrclick('TDS83');"><span
+                                                            class="hide">실시간 이슈 키워드 </span>닫기</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <div class="mainBn FIELD" name="ad_big" id="ad_big"
+                                    style="width: auto; min-height: 100px; background-color: rgb(247, 247, 247); height: 150px;">
+                                    <a href="https://cyad1.nate.com/click.kti/mnate/main@nb_Top3?ads_no=211230&amp;cmp_no=28511&amp;img_no=362758"
+                                        style="display:block;height:150px;background:#f7f7f7" target="_top"><img
+                                            alt="광고"
+                                            src="https://adimg.nate.com/img/2022/03/lina07/lina07_0303_640x300_f7f7f7.jpg"
+                                            width="320" height="150" border="0"></a>
+                                </div>
+                                <section>
+                                    <div class="section FIELD">
+                                        <ul class="mpt1 ic2">
+                                            <li class="pt2">
+                                                <a href="https://m.news.nate.com/photoSlide/view?clstId=921126&amp;section=sisa"
+                                                    onclick="return MM_GLOBAL.ndrclick('ABT06', 'MH_01_05_01-20220317085835');">
+                                                    <span class="iBox"><img
+                                                            src="https://m2.nateimg.co.kr/news/artc/1647475094_312.png"
+                                                            data-img="https://m2.nateimg.co.kr/news/artc/1647475094_312.png"
+                                                            alt="" width="100%"><span class="iType"><span
+                                                                class="photo">포토슬라이드</span></span></span>
+                                                    <span>모두 타 버린 주택 내부</span>
+                                                </a>
+                                            </li>
+                                            <li class="pt2">
+                                                <a href="https://m.news.nate.com/photoSlide/view?clstId=921122&amp;section=ent"
+                                                    onclick="return MM_GLOBAL.ndrclick('ABT08', 'MH_03_13_01-20220317090327');">
+                                                    <span class="iBox"><img
+                                                            src="https://m2.nateimg.co.kr/news/artc/1647474633_175.jpg"
+                                                            data-img="https://m2.nateimg.co.kr/news/artc/1647474633_175.jpg"
+                                                            alt="" width="100%"><span class="iType"><span
+                                                                class="photo">포토슬라이드</span></span></span>
+                                                    <span>권상우♥손태영, 국내 확진자 40만명인데…뉴욕서 노마스크 관광</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </section>
+                                <div class="section FIELD">
+                                    <section>
+                                        <div class="lifeInfo">
+                                            <div class="info">
+                                                <h2 class="hide">오늘의 날씨</h2>
+                                                <div class="wt">
+                                                    <div style="overflow: hidden; position: relative; height: 38px;">
+                                                        <div
+                                                            style="position: absolute; width: 100%; height: 38px; transform: translate3d(0px, -38px, 0px);">
+                                                            <a href="https://m.weather.nate.com/Today?areaCode=11G00201 "
+                                                                onclick="return MM_GLOBAL.ndrclick('MWE01');" "=""><span class="
+                                                                area">제주</span><img
+                                                                    src="https://m1.nateimg.co.kr/news/mweather2/96x96_am_15.png"
+                                                                    width="22" height="22" alt="비끝남"><span
+                                                                    class="tem">14°</span><span
+                                                                    class="rainfall">0.0mm</span></a>
+                                                        </div>
+                                                        <div
+                                                            style="position: absolute; width: 100%; height: 38px; transform: translate3d(0px, 0px, 0px);">
+                                                            <a href="https://m.weather.nate.com/Today?areaCode=11C10301 "
+                                                                onclick="return MM_GLOBAL.ndrclick('MWE01');" "=""><span class="
+                                                                area">청주</span><img
+                                                                    src="https://m1.nateimg.co.kr/news/mweather2/96x96_am_15.png"
+                                                                    width="22" height="22" alt="비끝남"><span
+                                                                    class="tem">10°</span><span
+                                                                    class="rainfall">1.0mm</span></a>
+                                                        </div>
+                                                        <div
+                                                            style="position: absolute; width: 100%; height: 38px; transform: translate3d(0px, 38px, 0px);">
+                                                            <a href="https://m.weather.nate.com/Today?areaCode=11D10301 "
+                                                                onclick="return MM_GLOBAL.ndrclick('MWE01');" "=""><span class="
+                                                                area">춘천</span><img
+                                                                    src="https://m1.nateimg.co.kr/news/mweather2/96x96_am_04.png"
+                                                                    width="22" height="22" alt="흐림"><span
+                                                                    class="tem">8°</span><span
+                                                                    class="rainfall">0.0mm</span></a>
+                                                        </div>
+                                                    </div>
+                                                </div> <a href="https://m.weather.nate.com/Area?setArea=Y"
+                                                    class="areaset"
+                                                    onclick="return MM_GLOBAL.ndrclick('MWE02');">지역설정</a>
+                                            </div>
+                                            <div class="life"><a
+                                                    href="https://m.fortune.nate.com/content/list.nate?menu_cd=MN000098"
+                                                    class="fortune"
+                                                    onclick="return MM_GLOBAL.ndrclick('MWE11');">신년운세</a></div>
+                                        </div>
+                                    </section>
+                                </div>
+
+                               
+
+
+                                
+
+                            </section>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+</body>
+
+</html>

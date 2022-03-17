@@ -1,0 +1,427 @@
+
+
+/* header */
+
+.header {
+    position: relative;
+    height: 116px;
+    background-color: #fff;
+}
+
+h1{
+    font-weight: normal;
+    font-size: 2em;
+}
+
+.header h1 {
+    width: auto;
+    margin: 0 70px;
+    height: 57px;
+    text-align: center;
+    z-index: 1;
+}
+
+.header h1 a {
+    display: block;
+    padding: 16px 0 17px 0;
+}
+
+
+
+
+/* header-side */
+
+.my {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.my .mybtn {
+    position: relative;
+    display: block;
+    width: 53px;
+    height: 55px;
+    padding: 22px 15px 15px 15px;
+    color: transparent;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.my .mybtn:before {
+    content: '';
+    position: absolute;
+    top: 22px;
+    left: 15px;
+    display: block;
+    width: 22px;
+    height: 18px;
+    background: url(https://m1.nateimg.co.kr/n3main/sets2/set_ic2.png?v=2021081900) -20px -37px no-repeat;
+    background-size: 64px auto;
+}
+
+.todayLink {
+    position: absolute;
+    top: 6px;
+    right: 15px;
+}
+
+.today_tit {
+    position: relative;
+    display: block;
+    padding: 14px 0 0 0;
+    font-size: 0;
+    color: transparent;
+    overflow: hidden;
+}
+
+.today_tit .logoimg {
+    float: left;
+    width: 32px;
+    height: 16px;
+    margin: 2px 2px 0 0;
+}
+
+.today_tit .logoimg .circle.step1, .today-loader .logoimg .circle.step1 {
+    left: 0;
+    background: #5acfd1;
+    animation: left-to-right 1.7s linear infinite;
+}
+
+.today_tit .logoimg .circle, .today-loader .logoimg .circle {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
+
+.today_tit .logoimg .circle.step2, .today-loader .logoimg .circle.step2 {
+    left: 5px;
+    background: #5b6cff;
+    animation: right-to-left 1.7s linear infinite;
+}
+
+@keyframes right-to-left{
+    0% {
+        left: 16px;
+        z-index: 2;
+    }
+    
+    25% {
+        left: 8px;
+        z-index: 2;
+    }
+    50% {
+        left: 0;
+        z-index: 2;
+    }
+    75% {
+        left: 8px;
+        z-index: 1;
+    }
+    100% {
+        left: 16px;
+        z-index: 1;
+    }
+}
+
+
+@keyframes left-to-right{
+    0% {
+        left: 0;
+        z-index: 1;
+    }
+
+    25% {
+        left: 8px;
+        z-index: 1;
+    }
+    50% {
+        left: 16px;
+        z-index: 1;
+    }
+    75% {
+        left: 8px;
+        z-index: 2;
+    }
+    100% {
+        left: 0;
+        z-index: 2;
+    }
+
+}
+
+
+.today_tit .svcname {
+    float: right;
+    margin-top: 2px;
+    width: 28px;
+    height: 16px;
+    color: transparent;
+    background: url(https://m1.nateimg.co.kr/n3main/sets2/set_ic2.png?v=2021081900) 0 -125px no-repeat;
+    background-size: 64px auto;
+}
+
+
+/* search bar */
+
+
+.header .srchBox {
+    position: relative;
+    height: 48px;
+    padding: 1px;
+    margin: 0 15px;
+    border: solid 1px #ff2c2e;
+    border-radius: 2px 12px 2px 2px;
+    -webkit-border-radius: 2px 12px 2px 2px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.header .srchBox .field-wrap {
+    height: 44px;
+    padding: 0 85px 0 12px;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 1px 11px 1px 1px;
+    -webkit-border-radius: 1px 11px 1px 1px;
+    box-shadow: none;
+}
+
+
+.header .srchBox .field-wrap {
+    height: 44px;
+    padding: 0 85px 0 12px;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 1px 11px 1px 1px;
+    -webkit-border-radius: 1px 11px 1px 1px;
+    box-shadow: none;
+}
+
+.header .srchBox .type-text {
+    border: 0;
+    width: 100%;
+    margin: 11px 0 0 0;
+    background: #fff;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.header .srchBox .type-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 42px;
+    border: 0;
+    white-space: nowrap;
+    text-indent: -1000em;
+    overflow: visible;
+    cursor: pointer;
+    background: url(https://m1.nateimg.co.kr/n3main/sets2/set_ic2.png?v=2021081900) -36px -63px no-repeat;
+    background-size: 64px auto;
+}
+
+/* nav */
+
+.nav {
+    position: relative;
+    z-index: 2;
+    background-color: #fff;
+    height: 45px;
+    overflow: hidden;
+}
+
+.nav .navTab {
+    position: relative;
+    display: flex !important;
+    height: 45px;
+    width: 100%;
+    padding: 0 8px;
+    text-align: center;
+    display: -webkit-flex !important;
+    display: -webkit-inline-box !important;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+/* element.style {
+    left: 0px;
+    width: 652px;
+    transform: translate3d(0px, 0px, 0px);
+    display: block;
+    transition-duration: 0ms;
+} */
+
+.nav .navTab li {
+    position: relative;
+}
+
+.nav .navTab li a {
+    position: relative;
+    display: inline-block;
+    height: 45px;
+    padding: 0 10px;
+    font-size: 1.133em;
+    font-weight: 700;
+    line-height: 40px;
+    color: #000;
+    letter-spacing: -1px;
+    vertical-align: top;
+}
+
+.nav .navTab li .clickOn{
+    color: #ef1616;
+}
+
+
+/* main contents */
+
+
+.section {
+    margin: 8px 0;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+/* .mainContainer .section.FIELD{
+    display:none;
+} */
+
+#navbarNewDiv{
+    padding:100px;
+    font-size:50px;
+    text-align: center;
+}
+
+.mt1 {
+    position: relative;
+    overflow: hidden;
+}
+
+.mt1 .lt2_5 {
+    border-bottom: 1px solid #ededed;
+    background: #fafafa;
+}
+
+.mt1 .lt2_5 a {
+    position: relative;
+    display: block;
+    padding: 0 15px 0;
+    line-height: 37px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.sbj {
+    padding-right: 5px;
+    color: #3f7dee;
+}
+
+.mt1 .tit {
+    letter-spacing: -1px;
+}
+
+.mt1 .lt2_2 {
+    margin: 0 15px;
+    border-bottom: 1px solid #ededed;
+    overflow: hidden;
+}
+
+.mt1 .lt2_2 a {
+    display: block;
+    margin: 0 -15px;
+    padding: 11px 15px 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.rollItem {
+    will-change: transform;
+    will-change: left;
+}
+
+.mt1 .clm2 {
+    float: left;
+    max-width: 100%;
+    overflow: hidden;
+    letter-spacing: -1px;
+}
+
+.mt1 .clm2 .cntRt {
+    position: relative;
+    float: right;
+    margin: 0;
+    padding: 10px 15px 9px 10px;
+    white-space: nowrap;
+}
+
+.mt1 .clm2 .cntRt + a {
+    margin: 0;
+    padding: 10px 10px 9px 0;
+}
+
+.tag.vod {
+    top: 1px;
+    width: 15px;
+    height: 15px;
+    background-position: 0 -819px;
+}
+
+.tag {
+    position: relative;
+    display: inline-block;
+    width: 37px;
+    height: 17px;
+    margin-right: 5px;
+    line-height: 17px;
+    text-indent: -999px;
+    background: url(https://m1.nateimg.co.kr/n3main/sets2/set_ic2.png?v=2021081900) 0 0 no-repeat;
+    background-size: 64px auto;
+}
+
+.mt1 .clm2 .cntRt:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+    left: 0;
+    width: 1px;
+    height: 17px;
+    background-color: #ebebeb;
+}
+
+/* 실검 */
+
+.srchword {
+    position: relative;
+    margin-top: -1px;
+    letter-spacing: -1px;
+    border-top: 1px solid #ebebeb;
+    z-index: 2;
+}
+
+.srchword .rankFold {
+    overflow: hidden;
+}
+
+.srchword .btn_open, .srchword .btn_fold {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 41px;
+    height: 40px;
+    font-size: 0;
+    /* vertical-align: middle; */
+    border: 0;
+    border-left: 1px solid #ebebeb;
+    background-color: #f9faf9;
+}
